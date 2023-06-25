@@ -10,7 +10,7 @@ namespace concole_1
         public decimal Weight { get; set; }
         public decimal Height { get; set; }
 
-        public Person(string name,  string surname, int age, decimal weight, decimal height)
+        public Person(string name, string surname, int age, decimal weight, decimal height)
         {
             Name = name;
             Surname = surname;
@@ -19,11 +19,12 @@ namespace concole_1
             Height = height;
         }
 
+
+        public override string ToString()
+        {
+            return $"name : {name}, Surname : {surname},  Age : {age}, Weight : {weight}, Height : {height}"
+        }
     }
-    public override string ToString()
-    { 
-        return $"name : {name}, Surname : {surname},  Age : {age}, Weight : {weight}, Height : {height}"
-    } 
     public class Program
     {
         public static void Main(string[] args)
